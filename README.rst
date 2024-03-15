@@ -5,7 +5,9 @@ This github repo captures the outcomes of the Our Land and Water decision tree c
 
 This Confluence space provides a repository for the resources and examples developed as part of Stage 1 of the Mitigation Effectiveness Monitoring Design Framework project. Note that this space was created to support the project and provide a resource point for the project team. It is not intended to be a comprehensive resource for all things related to decision tree and is provided here in an as-is state.
 
-The main point of entry to this space is:
+`This link provides the main point of entry to this space <https://komanawa-solutions-ltd.github.io/olw-decision-tree/Mitigation-Effectiveness--Monitoring-Design-Framework_49348612.html>`_
+
+
 
 .. TODO - add link to main page
 
