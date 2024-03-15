@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OLW Monitoring Design Framework : Temporal Trend Assessments</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">OLW Monitoring Design Framework</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Mitigation-Effectiveness--Monitoring-Design-Framework_49348612.html">Mitigation Effectiveness  Monitoring Design Framework</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Statistical-analysis-module_119865345.html">Statistical analysis module</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            OLW Monitoring Design Framework : Temporal Trend Assessments
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Amy Whitehead</span>, last modified on Mar 29, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Detecting temporal trends in a core set of environmental variables (or ‘indicators’) is one of the primary aims of many environmental monitoring programmes, including both long-term state of the environment (SOE) monitoring programmes and monitoring to assess the effectiveness of mitigations. In a general sense, carrying out a trend assessment means building a statistical model of the changes in an environmental indicator over time. The data may represent measurements made at regular intervals (e.g.,hourly, daily, weekly, monthly, annually) or on an irregular basis. The statistical model we build generally consists of one or more of the following (1) components related to regular cycles such as seasonal, diurnal or tidal; (2) patterns driven by some exogenous variable (e.g., mitigations as a driver of water quality improvement); (3) a long-term trend in the central tendency of the process; and (4) some random variability which is composed of natural variability, measurement error, and some type of serial dependence. The focus of trend analysis is on the long-term trend component, we wish to know the direction and rate of change over some multi-year period of interest. </p><p>Trend assessment methods are based on the concepts of regression analysis where time is typically the explanatory variable of interest. In the case of assessing the effectiveness of mitigations, we may also wish to use an explanatory variable that represents a driver of change, which has itself been changing monotonically (or nearly monotonically) over time. For example, we may be interested in evaluating the effect of the proportion of the catchment with riparian planting or changes in land use or intensity. This alternative approach can be particularly valuable when the hypothesized driver of change has a highly nonlinear time trend (e.g., relatively stable land use followed by a period of rapid intensification). If we are correct about the role of this driver of change, then we may be better able to characterize the temporal pattern of the trend than would be the case if we simply used time as the explanatory variable. Trend assessments can consider both sudden and gradual trends over time, as well as trends with, or without, consideration of the effects of time-varying natural drivers of the trends of interest (e.g., seasonal or long-term climatic drivers).</p><p>Approaches to trend assessments vary depending on the available data and the hypothesised drivers (X) of the response variable (Y, Table 1). It is important to understand the data requirements of a trend assessment when developing a monitoring regime to ensure that the measured data are likely to be fit for purpose. </p><p><em>Table 1. Classification of five types of tests for trends (from Helsel et al 2020). Y = response variable of interest (e.g., nitrate concentration). X = exogenous variable expected to affect Y (e.g., land use intensity). </em></p><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Type of trend test</strong></p></th><th class="confluenceTh"><p style="text-align: center;"><strong>Not adjusted for the exogenous variable, X</strong></p></th><th class="confluenceTh"><p style="text-align: center;"><strong>Adjusted for the exogenous variable, X</strong></p></th></tr><tr><td class="confluenceTd"><p>Nonparametric</p></td><td class="confluenceTd"><p style="text-align: center;">Mann-Kendall trend test of Y</p></td><td class="confluenceTd"><p style="text-align: center;">Man-Kendall trend test on residuals from loess of Y on X</p></td></tr><tr><td class="confluenceTd"><p>Mixed</p></td><td class="confluenceTd"><p style="text-align: center;"></p><p style="text-align: center;">-</p><p style="text-align: center;"></p></td><td class="confluenceTd"><p style="text-align: center;">Mann-Kendall trend test on residuals from regression of Y on X</p></td></tr><tr><td class="confluenceTd"><p>Parametric</p></td><td class="confluenceTd"><p style="text-align: center;">Regression of Y on time</p></td><td class="confluenceTd"><p style="text-align: center;">Regression of Y on X and time</p></td></tr></tbody></table></div><p>Detailed descriptions of how to undertake trend assessments of environmental data can be found in Helsel et al (2020) and an upcoming guidance document specific to undertaking temporal trend assessments for freshwater quality variables in New Zealand (Snelder et al, In press). This document provides guidance on the appropriate methods of trend analysis, including methods for:</p><ol><li><p>acquiring and compiling data,</p></li><li><p>accounting for confounding factors,</p></li><li><p>assessing trend direction, rate, and confidence in these determinations, and</p></li><li><p>reporting the results.</p></li></ol><p>In addition, two tools have been developed in NZ to undertake trend assessments using non-parametric regression techniques. These tools were designed primarily with long-term environmental data, such as State of the Environment water quality monitoring data, in mind but are also appropriate for assessing trends associated with mitigation actions. They are available free online.</p><ul><li><p><a class="external-link" href="https://aus01.safelinks.protection.outlook.com/?url=http%3A%2F%2Flandwaterpeople.co.nz%2Fwp-content%2Fuploads%2F2018%2F07%2FLWPTrends_TrendsDec19.zip&amp;data=04%7C01%7CAmy.Whitehead%40niwa.co.nz%7Ce622f8a084f34817092708d88ce31ba6%7C41caed736a0c468aba499ff6aafd1c77%7C0%7C0%7C637414254407637176%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=GuFmVk8vFY3Vh76agWVECIUpmE9a40pznoC1%2BuNkde8%3D&amp;reserved=0" rel="nofollow">http://landwaterpeople.co.nz/wp-content/uploads/2018/07/LWPTrends_TrendsDec19.zip</a></p></li><li><p><a class="external-link" href="https://aus01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.jowettconsulting.co.nz%2Fhome%2Ftime-1&amp;data=04%7C01%7CAmy.Whitehead%40niwa.co.nz%7Ce622f8a084f34817092708d88ce31ba6%7C41caed736a0c468aba499ff6aafd1c77%7C0%7C0%7C637414254407647167%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=%2B5TuO2uho8HDIEtIL2vhaOq6p66KFIzPZwykYoUqoAg%3D&amp;reserved=0" rel="nofollow">https://www.jowettconsulting.co.nz/home/time-1</a></p></li></ul><h3 id="TemporalTrendAssessments-References">References</h3><p>Helsel, D.R., Hirsch, R.M., Ryberg, K.R., Archfield, S.A., Gilroy, E.J. (2020) Trend Analysis. Chapter 12 in <em>Statistical methods in water resources: U.S. Geological Survey Techniques and Methods</em>, Book 4, Chapter A3. 458 pp. <a class="external-link" href="https://doi.org/10.3133/tm4a3." rel="nofollow">https://doi.org/10.3133/tm4a3.</a></p><p>Snelder, T.H., Fraser, C., Larned, S.T., Whitehead, A.L. (In press) Guidance for the analysis of temporal trends in environmental data. NIWA Client Report 2021017WN prepared for Envirolink (MBIE). NIWA, Christchurch.</p>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Mar 15, 2024 00:57</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

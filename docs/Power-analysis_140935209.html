@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OLW Monitoring Design Framework : Power analysis</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">OLW Monitoring Design Framework</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Mitigation-Effectiveness--Monitoring-Design-Framework_49348612.html">Mitigation Effectiveness  Monitoring Design Framework</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Statistical-analysis-module_119865345.html">Statistical analysis module</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            OLW Monitoring Design Framework : Power analysis
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Zeb Etheridge</span>, last modified on Jul 02, 2023
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Power analysis is an important aspect of experimental design. It allows us to determine the sample size required to detect an effect of a given size with a given degree of confidence. Conversely, it can be used to determine the probability of detecting an effect of a given size with a given level of confidence, under sample size constraints. This information can be useful for understanding whether the results of monitoring are likely to be statistically sufficient to answer questions of interest and, if not, how many samples or sites might need to be added to provide the answers required. We briefly introduce three methods for undertaking power analyses and provide links to more detailed documentation, including worked examples and online calculators. We also demonstrate the application of different types of power analysis in the <a href="https://olw-decision-tree.atlassian.net/wiki/spaces/OMDF/pages/255459372/Scenario+1-+Riparian+Management+DST" rel="nofollow">riparian management</a> and <a href="https://olw-decision-tree.atlassian.net/wiki/spaces/OMDF/pages/137330785/Scenario+2+-+Groundwater+Nitrate+Pathway+Case+Study" data-linked-resource-id="137330785" data-linked-resource-version="16" data-linked-resource-type="page">groundwater nitrate</a> case studies.</p><h3 id="Poweranalysis-Poweranalysisfordetectingeffectsizes">Power analysis for detecting <span class="inline-comment-marker" data-ref="c0a78a7d-5367-4fb6-a9e2-d583b0644541">effect sizes</span></h3><p>The following four terms are inter-related in power analyses to detect effect sizes:</p><ul><li><p><strong>sample size:</strong> the number of samples or sites required</p></li><li><p><strong>effect size:</strong> difference between group means or the group mean and a reference state or regulatory limit</p></li><li><p><strong>significance level:</strong> P(Type I error) or probability of finding an effect that is not there</p></li><li><p><strong>power:</strong> 1 - P(Type II error) or probability of finding an effect that is there.</p></li></ul><p>If any three of these terms are known, we can calculate the fourth. For example, power analysis can be used to estimate the number of samples or sites required or identify the power of the current or proposed monitoring network to detect a desired effect size (e.g., a decrease of 10%). The power to detect a reduction is also related to the variability of the data set, where a higher standard deviation relative to the mean will result in lower power to detect an effect. These effects are illustrated in Figure 1.</p><p><span class="inline-comment-marker" data-ref="d4218791-2245-4d36-8d86-25fe8c62c3ce">Helsel et al (2020) includes detailed descriptions of parametric and non-parametric </span>power analyses, along with <span class="inline-comment-marker" data-ref="d4218791-2245-4d36-8d86-25fe8c62c3ce">worked examples and R code</span>. An online parametric power calculator is available at <a class="external-link" href="https://clincalc.com/stats/samplesize.aspx" rel="nofollow">https://clincalc.com/stats/samplesize.aspx</a></p><span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size"><img class="confluence-embedded-image image-center" width="680" loading="lazy" src="attachments/140935209/434995212.png?width=680" data-image-src="attachments/140935209/434995212.png" data-height="417" data-width="619" data-unresolved-comment-count="0" data-linked-resource-id="434995212" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="ashley_cust_power.png" data-base-url="https://olw-decision-tree.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="140935209" data-linked-resource-container-version="20" data-media-id="db410830-b020-44b1-aec2-d7e01bf69153" data-media-type="file"></span><p>Figure 1. Example of a power analysis to determine the number of monthly samples required to detect a reduction of nitrate nitrite nitrogen (NNN) at two monitored river sites in Canterbury. Panel A shows the measured time series of NNN at each site. Note that the y-axes differ between sites, with considerably lower NNN values measured at the Ashley River site. Panel B shows the power available (colour) to detect a % reduction in NNN (x-axis) for different numbers of monthly samples (y-axis). The dotted black line indicates the contour at which we would be 80% confident of detecting a reduction (power = 0.8). The power to detect a reduction increases with both the number of samples and the greater the magnitude of the reduction at both sites. However, there is less power to detect a reduction at the Ashley River site because the relative magnitude of the reduction is small compared to the variability in the data. Calculated using <em>power.t.test()</em> in R.</p><h3 id="Poweranalysis-Poweranalysisfordetectingtrends">Power analysis for detecting trends</h3><p><span class="inline-comment-marker" data-ref="4be400f5-87ca-48ca-a25b-8bd3370d2761">A power analysis for detecting trends is similar to that described above but is used to estimate the probability of rejecting the hypothesis of no trend when in fact there is a trend (Irvine et al. 2012). Statistical power can be increased by increasing the sample size (e.g., the number of years of data collection) and/or reducing the variation (noise) in the data by flow adjustment or improved quality assurance/quality control (QA/QC) procedures. Other factors that contribute to statistical power include the specific effect size of interest and the probability of Type 1 error (α). The probability of Type 1 error is the probability of detecting a trend when in fact there is not one. All of these factors interact. Through iteration of the power analysis code, one is able to determine the various combinations of the number of years, within-year sampling frequency, and effect size that lead to a given power desired for a given parameter at a given location. </span></p><span class="confluence-embedded-file-wrapper image-center-wrapper"><img class="confluence-embedded-image image-center" loading="lazy" src="attachments/140935209/143229033.png" data-image-src="attachments/140935209/143229033.png" data-height="1737" data-width="2687" data-unresolved-comment-count="0" data-linked-resource-id="143229033" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image-20201124-224839.png" data-base-url="https://olw-decision-tree.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="140935209" data-linked-resource-container-version="20" data-media-id="3977254b-9530-47c2-840d-4bb75c00d90c" data-media-type="file"></span><p>Figure 2. A <span class="inline-comment-marker" data-ref="8067aa33-cd7a-47c4-b1bc-290c3c4af672">example power analysis</span> for detecting trends using measured nitrate (mg/L) data from Kaiapoi Road. Panel A shows the time series of measured data, while Panel B estimates the power available to detect a trend at alpha = 0.05 as successive samples from the time series are added. This analysis suggests that we would need ~83 samples to be 80% confident that we would be able to detect a significant<span class="inline-comment-marker" data-ref="5c622e4d-9c4d-48af-b2c8-02cbe25410cf"> trend, which equates to approximately 12 years based on the frequency of sampling in this time series. Calculated using </span><em><span class="inline-comment-marker" data-ref="5c622e4d-9c4d-48af-b2c8-02cbe25410cf">power.trend()</span></em><span class="inline-comment-marker" data-ref="5c622e4d-9c4d-48af-b2c8-02cbe25410cf"> in the </span><a class="external-link" href="https://www.rdocumentation.org/packages/emon/versions/1.3" rel="nofollow"><em><span class="inline-comment-marker" data-ref="5c622e4d-9c4d-48af-b2c8-02cbe25410cf">emon</span></em></a><span class="inline-comment-marker" data-ref="5c622e4d-9c4d-48af-b2c8-02cbe25410cf"> package in R.</span></p><h3 id="Poweranalysis-Simulatedpoweranalysis">Simulated power analysis</h3><p>The two analytical power analysis techniques described above provide an efficient solution to the problems of estimating the required sample size and statistical power for simple monitoring designs. However, they may not be suitable for more complex problems. Computer simulation can provide a useful alternative for estimating the power available to detect change as analyses can incorporate complexities including multiple sources of random variation and response variables that are not normally-distributed. The steps of a simulated power analysis typically include: </p><ol start="1"><li><p>simulating many datasets that assume that the alternative hypothesis is true (i.e., the effect of interest is not zero),</p></li><li><p>using each simulated dataset to perform a statistical test of the null hypothesis that the effect size is zero, and </p></li><li><p>calculating the proportion of the simulated data sets that reject the null hypothesis. This proportion is the power estimate.</p></li></ol><p>Examples of simulated power analyses for applied research are described in detail by Arnold et al (2011) and Johnson et al (2015), with worked examples and R code. Wellen et al (2020) describes the application of simulated power analysis for calculating sample sizes required to achieve acceptable levels of statistical power in hypothesis tests of annual nutrient water quality in streams.</p><h3 id="Poweranalysis-Usefulreferences">Useful references</h3><p>Arnold, B.F., Hogan, D.R., Colford, J.M., Hubbard, A.E. (2011) Simulation methods to estimate design power: An overview for applied research. <em>BMC Medical Research Methodology</em>, 11: 94. <a class="external-link" href="https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-11-94" rel="nofollow">https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/1471-2288-11-94</a></p><p>Helsel, D.R., Hirsch, R.M., Ryberg, K.R., Archfield, S.A., Gilroy, E.J. (2020) How many observations do I need? Chapter 13 in <em>Statistical methods in water resources: U.S. Geological Survey Techniques and Methods</em>, Book 4, Chapter A3. 458 pp. <a class="external-link" href="https://doi.org/10.3133/tm4a3." rel="nofollow">https://doi.org/10.3133/tm4a3.</a></p><p>Irvine, K.M., Manlove, K., Hollimon, C. (2012) Power Analysis and Trend Detection for Water Quality Monitoring Data: An application for the Greater Yellowstone Inventory and Monitoring Network. Natural Resource Report NPS/GRY/NRR—2012/556. National Park Service, Fort Collins, CO. <a class="external-link" href="https://irma.nps.gov/DataStore/DownloadFile/451983" rel="nofollow">https://irma.nps.gov/DataStore/DownloadFile/451983</a> </p><p>Johnson, P.C.D., Barry, S.J.E., Ferguson, H.M., Müller, P. (2015) Power analysis for generalized linear mixed models in ecology and evolution. Methods in Ecology and Evolution, 6: 133–142. <a class="external-link" href="https://doi.org/10.1111/2041-210X.12306" rel="nofollow">https://doi.org/10.1111/2041-210X.12306</a></p><p>Wellen, C., Van Cappellen, P., Gospodyn, L., Thomas, J.L., Mohamed, M.N. (2020) An analysis of the sample size requirements for acceptable statistical power in water quality monitoring for improvement detection. <em>Ecological Indicators</em>, 118: 106684. <a class="external-link" href="https://doi.org/10.1016/j.ecolind.2020.106684" rel="nofollow">https://doi.org/10.1016/j.ecolind.2020.106684</a></p>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/140935209/157384705.png">image-20201124-222110.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/140935209/143229033.png">image-20201124-224839.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/140935209/475922451.png">ashley_cust_power.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/140935209/434995212.png">ashley_cust_power.png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Mar 15, 2024 00:57</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
